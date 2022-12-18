@@ -3,16 +3,15 @@ const axios = require('axios');
 const axiosInstance = axios.create();
 
 async function reqHelper(url, method, body) {
+    console.log('Peticiones a ms-api en servidor 1', new Date());
     try {
         const { data } = await axiosInstance({
             url,
             method: method,
             data: body
         })
-        console.log('====reqHelper, data', data);
         return data;
     } catch (error) {
-        console.log('====reqHelper error', error);
         return error;
     }
 

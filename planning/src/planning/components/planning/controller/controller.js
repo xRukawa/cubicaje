@@ -18,9 +18,14 @@ module.exports = function (injectedStore) {
         return store.itemsByPlanning(id);
     }
 
+    async function update(data) {
+        return store.update(data);
+    }
+
     return {
         list,
         insert,
-        itemsByPlanning
+        itemsByPlanning,
+        update
     };
 }

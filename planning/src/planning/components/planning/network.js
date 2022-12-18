@@ -22,4 +22,10 @@ router.get('/items/:id', function (req, res) {
         .catch((err) => response.error(req, res, 500, err))
 })
 
+router.patch('/', function (req, res) {
+    ctrl.update(req.body)
+        .then((data) => response.success(req, res, 200, data))
+        .catch((err) => response.error(req, res, 500, err))
+})
+
 module.exports = router;

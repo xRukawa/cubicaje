@@ -8,6 +8,7 @@ function list(table) {
                 conn.query(sql, function (err, rows) {
                     return !err ? resolve(rows) : reject(err)
                 })
+                conn.release();
             } else {
                 conn.release();
                 return reject(err);
@@ -24,6 +25,7 @@ function get(table, id) {
                 conn.query(sql, [id], function (err, rows) {
                     return !err ? resolve(rows[0]) : reject(err)
                 })
+                conn.release();
             } else {
                 conn.release();
                 return reject(err);
@@ -41,6 +43,7 @@ function insert(table, body) {
                 conn.query(sql, [Object.values(data)], function (err, rows) {
                     return !err ? resolve(rows) : reject(err)
                 })
+                conn.release();
             } else {
                 conn.release();
                 return reject(err);
@@ -57,6 +60,7 @@ function update(table, data) {
                 conn.query(sql, [data, data.id], function (err, rows) {
                     return !err ? resolve(rows) : reject(err)
                 })
+                conn.release();
             } else {
                 conn.release();
                 return reject(err);
@@ -73,6 +77,7 @@ function remove(table, id) {
                 conn.query(sql, [id], function (err, rows) {
                     return !err ? resolve(rows) : reject(err)
                 })
+                conn.release();
             } else {
                 conn.release();
                 return reject(err);
