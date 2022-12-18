@@ -9,7 +9,7 @@ module.exports = {
         database: process.env.MYSQL_DB || 'cubicaje'
     },
     mysqlService: {
-        host: process.env.MYSQL_SERVER_HOST || 'cubicajedb.cdno4chgdy94.us-east-1.rds.amazonaws.com',
+        host: process.env.MYSQL_SERVER_HOST || 'localhost',
         port: process.env.MYSQL_SERVER_PORT || 3001
     }
 };
