@@ -3,7 +3,7 @@ const axios = require('axios');
 const axiosInstance = axios.create();
 
 async function reqHelper(url, method, body) {
-    console.log('Peticiones en ms-plannings de servidor 1');
+    console.log('Peticiones en ms-plannings de servidor 1', new Date());
     try {
         const { data } = await axiosInstance({
             url,
