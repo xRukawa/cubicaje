@@ -23,7 +23,6 @@ function list() {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -70,13 +69,11 @@ function insert(body) {
                             }
                         })
                     } else {
-                        conn.release();
                         return reject(err);
                     }
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -95,7 +92,6 @@ function itemsByPlanning(id) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -113,7 +109,6 @@ function update(data) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })

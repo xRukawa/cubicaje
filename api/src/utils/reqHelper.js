@@ -10,10 +10,10 @@ async function reqHelper(url, method, body) {
             method: method,
             data: body
         })
-        console.log('====response data', data);
+        // console.log('====response data', data);
         return data;
     } catch (error) {
-        console.log('====response error', error);
+        // console.log('====response error', error);
         return error;
     }
 

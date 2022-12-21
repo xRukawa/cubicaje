@@ -10,7 +10,6 @@ function list(table) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -27,7 +26,6 @@ function get(table, id) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -45,7 +43,6 @@ function insert(table, body) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -62,7 +59,6 @@ function update(table, data) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
@@ -79,7 +75,6 @@ function remove(table, id) {
                 })
                 conn.release();
             } else {
-                conn.release();
                 return reject(err);
             }
         })
